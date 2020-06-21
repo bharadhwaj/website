@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Bharadhwaj CN",
+  "name": "Bharadhwaj CN - PC",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,7 +8,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "start-icon.png",
+      "src": "icons/start-icon.png",
       "type": "image/png",
       "sizes": "199x204"
     }
