@@ -2,7 +2,7 @@
 
 echo "Post build script starting execution..."
 
-echo \"bharadhwajcn.com\" > ./build/CNAME
+echo bharadhwajcn.com > ./build/CNAME
 touch ./build/.nojekyll
 mkdir -p "./build/.well-known"
 echo "
