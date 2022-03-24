@@ -11,7 +11,7 @@ import StartBarMenu from '../StartBarMenu';
 import { windowAction } from '../../actions';
 import { windowSelector } from '../../selectors';
 
-const StartBar = props => {
+const StartBar = (props) => {
   const {
     setExperienceWindowMinimize,
     showExperienceWindow,
@@ -21,7 +21,7 @@ const StartBar = props => {
     minimizeAboutMeWindow,
   } = props;
 
-  const [menuOpen, setMenuOpen] = React.useState(false);
+  const [isMenuOpen, setMenuVisibility] = React.useState(false);
   const [currentTime, setTime] = React.useState(
     new Date().toLocaleString('en-US', {
       hour: 'numeric',
@@ -52,20 +52,19 @@ const StartBar = props => {
         <Toolbar>
           <div className={classes.startMenu}>
             <StartBarMenu
-              menuOpen={menuOpen}
-              setMenuOpen={setMenuOpen}
-              {...props}
+              isMenuOpen={isMenuOpen}
+              setMenuVisibility={setMenuVisibility}
             />
             <Button
-              onClick={() => setMenuOpen(!menuOpen)}
-              active={menuOpen}
+              onClick={() => setMenuVisibility(!isMenuOpen)}
+              active={isMenuOpen}
               style={{ fontWeight: 'bold' }}
             >
-              <LogoIcon image="/icons/start-icon.png" alt="" />
+              <LogoIcon image='/icons/start-icon.png' alt='' />
               Start
             </Button>
 
-            <Bar className={classes.startMenuDivider} vertical size="lg" />
+            <Bar className={classes.startMenuDivider} vertical size='lg' />
 
             {showExperienceWindow && (
               <Button
@@ -75,7 +74,7 @@ const StartBar = props => {
                 active={!minimizeExperienceWindow}
                 style={{ fontWeight: 'bold' }}
               >
-                <LogoIcon image="/icons/app.png" alt="" />
+                <LogoIcon image='/icons/app.png' alt='' />
                 experience.exe
               </Button>
             )}
@@ -86,7 +85,7 @@ const StartBar = props => {
                 active={!minimizeAboutMeWindow}
                 style={{ fontWeight: 'bold' }}
               >
-                <LogoIcon image="/icons/app.png" alt="" />
+                <LogoIcon image='/icons/app.png' alt='' />
                 about_me.exe
               </Button>
             )}
@@ -111,26 +110,26 @@ const mapStateToProps = createStructuredSelector({
   minimizeAboutMeWindow: windowSelector.minimizeAboutMeWindow(),
 });
 
-const mapDispatchToProps = dispatch => ({
-  setExperienceWindowVisibility: isVisible => {
+const mapDispatchToProps = (dispatch) => ({
+  setExperienceWindowVisibility: (isVisible) => {
     return dispatch(windowAction.setExperienceWindowVisibility(isVisible));
   },
-  setExperienceWindowMinimize: isMinimized => {
+  setExperienceWindowMinimize: (isMinimized) => {
     return dispatch(windowAction.setExperienceWindowMinimize(isMinimized));
   },
-  setEducationWindowVisibility: isVisible => {
+  setEducationWindowVisibility: (isVisible) => {
     return dispatch(windowAction.setEducationWindowVisibility(isVisible));
   },
-  setEducationWindowMinimize: isMinimized => {
+  setEducationWindowMinimize: (isMinimized) => {
     return dispatch(windowAction.setEducationWindowMinimize(isMinimized));
   },
-  setAboutMeWindowVisibility: isVisible => {
+  setAboutMeWindowVisibility: (isVisible) => {
     return dispatch(windowAction.setAboutMeWindowVisibility(isVisible));
   },
-  setAboutMeWindowMinimize: isMinimized => {
+  setAboutMeWindowMinimize: (isMinimized) => {
     return dispatch(windowAction.setAboutMeWindowMinimize(isMinimized));
   },
-  setShutdownPopupVisibility: isVisible => {
+  setShutdownPopupVisibility: (isVisible) => {
     return dispatch(windowAction.setShutdownPopupVisibility(isVisible));
   },
 });
