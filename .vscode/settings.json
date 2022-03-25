@@ -9,6 +9,8 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "javascript.implicitProjectConfig.experimentalDecorators": true,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120,
+  "prettier.printWidth": 120,
 }

@@ -15,9 +15,7 @@ class App extends Component {
       <Provider store={reduxStore}>
         <GlobalStyle />
         <ThemeProvider theme={themes.default}>
-          <>
-            <IndexPage />
-          </>
+          <IndexPage />
         </ThemeProvider>
       </Provider>
     );

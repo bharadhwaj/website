@@ -22,30 +22,15 @@ const WorksMenu = (props) => {
           open={isWorksMenuOpen}
           onClick={() => setWorksMenuVisibility(false)}
         >
-          <ListItem
-            as='a'
-            href='https://bingewatchersguide.online/'
-            target='_blank'
-            className={classes.menuItem}
-          >
+          <ListItem as='a' href='https://bingewatchersguide.online/' target='_blank' className={classes.menuItem}>
             Binge Watcher's Guide
           </ListItem>
 
-          <ListItem
-            as='a'
-            href='https://fubar-charts.bharadhwajcn.com/'
-            target='_blank'
-            className={classes.menuItem}
-          >
+          <ListItem as='a' href='https://fubar-charts.bharadhwajcn.com/' target='_blank' className={classes.menuItem}>
             Fubar Charts
           </ListItem>
 
-          <ListItem
-            as='a'
-            href='https://app.getbasis.co/'
-            target='_blank'
-            className={classes.menuItem}
-          >
+          <ListItem as='a' href='https://app.getbasis.co/' target='_blank' className={classes.menuItem}>
             Basis
           </ListItem>
 
@@ -58,12 +43,7 @@ const WorksMenu = (props) => {
             Automate
           </ListItem>
 
-          <ListItem
-            as='a'
-            href='https://www.github.com/bharadhwaj'
-            target='_blank'
-            className={classes.menuItem}
-          >
+          <ListItem as='a' href='https://www.github.com/bharadhwaj' target='_blank' className={classes.menuItem}>
             More on Github...
           </ListItem>
         </List>
