@@ -1,5 +1,0 @@
-
-This is a Brave Rewards publisher verification file.
-Domain: bharadhwajcn.com
-Token: 713297f2fdd722507a25dec2ed2e852ec21807d8e817c5cdd93d0ec938c288dd
-
