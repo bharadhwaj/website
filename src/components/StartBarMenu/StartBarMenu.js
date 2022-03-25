@@ -9,13 +9,7 @@ import LogoIcon from '../LogoIcon';
 import style from './style';
 
 const StartBarMenu = (props) => {
-  const {
-    isMenuOpen,
-    setMenuVisibility,
-    showExperienceWindow,
-    showAboutMeWindow,
-    showShutdownPopup,
-  } = props;
+  const { isMenuOpen, setMenuVisibility, showExperienceWindow, showAboutMeWindow, showShutdownPopup } = props;
 
   const classes = style();
 
@@ -41,12 +35,7 @@ const StartBarMenu = (props) => {
       />
 
       <div className={classes.startMenuStyle}>
-        <List
-          className={classes.menu}
-          horizontalAlign='left'
-          verticalAlign='top'
-          open={isMenuOpen}
-        >
+        <List className={classes.menu} horizontalAlign='left' verticalAlign='top' open={isMenuOpen}>
           <ListItem
             className={classes.menuItem}
             onMouseOver={() => {
