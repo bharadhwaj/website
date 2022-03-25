@@ -22,10 +22,6 @@ const WorksMenu = (props) => {
           open={isWorksMenuOpen}
           onClick={() => setWorksMenuVisibility(false)}
         >
-          <ListItem as='a' href='https://bingewatchersguide.online/' target='_blank' className={classes.menuItem}>
-            Binge Watcher's Guide
-          </ListItem>
-
           <ListItem as='a' href='https://fubar-charts.bharadhwajcn.com/' target='_blank' className={classes.menuItem}>
             Fubar Charts
           </ListItem>
