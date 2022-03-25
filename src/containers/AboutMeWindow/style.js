@@ -38,7 +38,7 @@ const style = makeStyles({
   },
   paragraph: {
     marginTop: 20,
-  }
+  },
 });
 
 export default style;

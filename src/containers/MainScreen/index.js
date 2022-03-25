@@ -11,13 +11,11 @@ class MainScreen extends Component {
     const { classes } = this.props;
 
     return (
-      <>
-        <div className={classes.mainScreen}>
-          <ExperienceWindow />
-          <AboutMeWindow />
-          <ShutdownPopup />
-        </div>
-      </>
+      <div className={classes.mainScreen}>
+        <ExperienceWindow />
+        <AboutMeWindow />
+        <ShutdownPopup />
+      </div>
     );
   }
 }
