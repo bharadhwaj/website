@@ -41,7 +41,6 @@ const StartBar = (props) => {
     return () => clearInterval(timer);
   }, []);
 
-  console.log('PROPS: ', isAboutMeWindowMinimized);
   const classes = style();
 
   return (

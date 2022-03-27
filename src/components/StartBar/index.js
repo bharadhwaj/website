@@ -17,7 +17,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   setVisibility: (windowName, isVisible) => {
-    console.log('HERE: ', windowName, isVisible);
     if (isVisible) {
       dispatch(windowAction.showWindow(windowName));
     } else {
