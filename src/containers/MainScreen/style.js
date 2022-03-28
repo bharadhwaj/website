@@ -1,6 +1,6 @@
-import { withStyles } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/styles';
 
-const style = withStyles({
+const style = makeStyles({
   mainScreen: {
     width: '100%',
     height: '100vh',

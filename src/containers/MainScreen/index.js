@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import AboutMeWindow from '../AboutMeWindow';
 import ExperienceWindow from '../ExperienceWindow';
@@ -6,18 +6,16 @@ import ShutdownPopup from '../ShutdownPopup';
 
 import style from './style';
 
-class MainScreen extends Component {
-  render() {
-    const { classes } = this.props;
+const MainScreen = () => {
+  const classes = style();
 
-    return (
-      <div className={classes.mainScreen}>
-        <ExperienceWindow />
-        <AboutMeWindow />
-        <ShutdownPopup />
-      </div>
-    );
-  }
-}
+  return (
+    <div className={classes.mainScreen}>
+      <ExperienceWindow />
+      <AboutMeWindow />
+      <ShutdownPopup />
+    </div>
+  );
+};
 
-export default style(MainScreen);
+export default MainScreen;

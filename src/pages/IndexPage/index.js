@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import StartBar from '../../components/StartBar';
 
 import MainScreen from '../../containers/MainScreen';
 
-class IndexPage extends Component {
-  render() {
-    return (
-      <>
-        <MainScreen />
-        <StartBar />
-      </>
-    );
-  }
-}
+const IndexPage = () => {
+  return (
+    <>
+      <MainScreen />
+      <StartBar />
+    </>
+  );
+};
 
 export default IndexPage;
