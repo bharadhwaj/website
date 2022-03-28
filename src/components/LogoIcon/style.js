@@ -1,14 +1,14 @@
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from "@material-ui/styles";
 
 const style = makeStyles({
   icon: {
-    display: 'inline-block',
-    height: '20px',
-    paddingRight: '8px',
+    display: "inline-block",
+    height: "20px",
+    paddingRight: "8px",
   },
   iconImage: {
-    height: '100%',
-    width: 'auto',
+    height: "100%",
+    width: "auto",
   },
 });
 

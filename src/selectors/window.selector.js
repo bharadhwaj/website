@@ -1,4 +1,4 @@
-import { createSelector } from 'reselect';
+import { createSelector } from "reselect";
 
 const windowSelector = (state) => state?.window;
 const activeWindowSelector = (state) => state?.window?.active;

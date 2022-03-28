@@ -1,11 +1,11 @@
-import React from 'react';
-import { AppBar, Bar, Button, Toolbar } from 'react95';
+import React from "react";
+import { AppBar, Bar, Button, Toolbar } from "react95";
 
-import style from './style';
+import style from "./style";
 
-import LogoIcon from '../LogoIcon';
-import StartBarMenu from '../StartBarMenu';
-import { WINDOW } from '../../constants';
+import LogoIcon from "../LogoIcon";
+import StartBarMenu from "../StartBarMenu";
+import { WINDOW } from "../../constants";
 
 const StartBar = (props) => {
   const {
@@ -20,9 +20,9 @@ const StartBar = (props) => {
 
   const [isMenuOpen, setMenuVisibility] = React.useState(false);
   const [currentTime, setTime] = React.useState(
-    new Date().toLocaleString('en-US', {
-      hour: 'numeric',
-      minute: 'numeric',
+    new Date().toLocaleString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
       hour12: true,
     })
   );
@@ -30,9 +30,9 @@ const StartBar = (props) => {
   React.useEffect(() => {
     const timer = setInterval(() => {
       setTime(
-        new Date().toLocaleString('en-US', {
-          hour: 'numeric',
-          minute: 'numeric',
+        new Date().toLocaleString("en-US", {
+          hour: "numeric",
+          minute: "numeric",
           hour12: true,
         })
       );
@@ -48,7 +48,7 @@ const StartBar = (props) => {
       <Toolbar>
         <div className={classes.startMenu}>
           <StartBarMenu isMenuOpen={isMenuOpen} setMenuVisibility={setMenuVisibility} />
-          <Button onClick={() => setMenuVisibility(!isMenuOpen)} active={isMenuOpen} style={{ fontWeight: 'bold' }}>
+          <Button onClick={() => setMenuVisibility(!isMenuOpen)} active={isMenuOpen} style={{ fontWeight: "bold" }}>
             <LogoIcon image='/icons/start-icon.png' alt='' />
             Start
           </Button>
@@ -59,7 +59,7 @@ const StartBar = (props) => {
             <Button
               onClick={() => setVisibility(WINDOW.ABOUT_ME, isAboutMeWindowMinimized)}
               active={!isAboutMeWindowMinimized}
-              style={{ fontWeight: 'bold' }}
+              style={{ fontWeight: "bold" }}
             >
               <LogoIcon image='/icons/app.png' alt='' />
               about_me.exe
@@ -70,7 +70,7 @@ const StartBar = (props) => {
             <Button
               onClick={() => setVisibility(WINDOW.EDUCATION, isEducationWindowMinimized)}
               active={!isEducationWindowMinimized}
-              style={{ fontWeight: 'bold' }}
+              style={{ fontWeight: "bold" }}
             >
               <LogoIcon image='/icons/app.png' alt='' />
               education.exe
@@ -81,7 +81,7 @@ const StartBar = (props) => {
             <Button
               onClick={() => setVisibility(WINDOW.EXPERIENCE, isExperienceWindowMinimized)}
               active={!isExperienceWindowMinimized}
-              style={{ fontWeight: 'bold' }}
+              style={{ fontWeight: "bold" }}
             >
               <LogoIcon image='/icons/app.png' alt='' />
               experience.exe
@@ -89,7 +89,7 @@ const StartBar = (props) => {
           )}
         </div>
         <div className={classes.clockButton}>
-          <Button active style={{ fontWeight: 'bold' }}>
+          <Button active style={{ fontWeight: "bold" }}>
             {currentTime}
           </Button>
         </div>

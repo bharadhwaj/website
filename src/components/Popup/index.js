@@ -1,9 +1,9 @@
-import React from 'react';
-import { Button, Window, WindowContent, WindowHeader } from 'react95';
+import React from "react";
+import { Button, Window, WindowContent, WindowHeader } from "react95";
 
-import style from './style';
+import style from "./style";
 
-import LogoIcon from '../LogoIcon';
+import LogoIcon from "../LogoIcon";
 
 const Popup = (props) => {
   const { title, image, action, handleClose } = props;
@@ -14,7 +14,7 @@ const Popup = (props) => {
     <Window className={classes.screen}>
       <WindowHeader className={classes.header}>
         <span>Shut Down Windows</span>
-        <Button className={classes.headerButton} size={'sm'} square onClick={handleClose}>
+        <Button className={classes.headerButton} size={"sm"} square onClick={handleClose}>
           <span>x</span>
         </Button>
       </WindowHeader>

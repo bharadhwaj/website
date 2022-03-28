@@ -1,4 +1,4 @@
-import { actions } from '../constants';
+import { actions } from "../constants";
 
 export const setActiveWindow = (windowName) => ({
   type: actions.WINDOW.SET_ACTIVE_WINDOW,

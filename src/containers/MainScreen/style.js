@@ -1,12 +1,12 @@
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from "@material-ui/styles";
 
 const style = makeStyles({
   mainScreen: {
-    width: '100%',
-    height: '100vh',
-    background: 'teal',
-    position: 'relative',
-    textAlign: 'center',
+    width: "100%",
+    height: "100vh",
+    background: "teal",
+    position: "relative",
+    textAlign: "center",
   },
 });
 

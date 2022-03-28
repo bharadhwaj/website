@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
-import windowReducer from './window.reducer';
+import windowReducer from "./window.reducer";
 
 const rootReducer = combineReducers({
   window: windowReducer,

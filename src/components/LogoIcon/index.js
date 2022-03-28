@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import style from './style';
+import style from "./style";
 
 const LogoIcon = ({ image, alt, size }) => {
   const classes = style();

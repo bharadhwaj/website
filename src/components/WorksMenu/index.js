@@ -1,7 +1,7 @@
-import React from 'react';
-import { List, ListItem } from 'react95';
+import React from "react";
+import { List, ListItem } from "react95";
 
-import style from './style';
+import style from "./style";
 
 const WorksMenu = (props) => {
   const { isWorksMenuOpen, setWorksMenuVisibility } = props;

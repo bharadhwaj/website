@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import { reset } from 'react95';
+import { createGlobalStyle } from "styled-components";
+import { reset } from "react95";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}

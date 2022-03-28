@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button, Hourglass } from 'react95';
+import React from "react";
+import { Button, Hourglass } from "react95";
 
-import Popup from '../../components/Popup';
+import Popup from "../../components/Popup";
 
 const ShutdownPopup = (props) => {
   const { isVisible, closePopup } = props;
@@ -18,7 +18,7 @@ const ShutdownPopup = (props) => {
         onClick={() => {
           setShowDown(true);
           setTimeout(() => {
-            window.open('about:blank', '_self');
+            window.open("about:blank", "_self");
             window.close();
           }, 3000);
         }}
@@ -42,7 +42,7 @@ const ShutdownPopup = (props) => {
     );
   }
 
-  return <Hourglass style={{ padding: '20% 0' }} />;
+  return <Hourglass style={{ padding: "20% 0" }} />;
 };
 
 export default ShutdownPopup;

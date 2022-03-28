@@ -1,20 +1,20 @@
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from "@material-ui/styles";
 
 const style = makeStyles({
   startMenuStyle: {
     left: 170,
     bottom: 50,
-    position: 'relative',
-    display: 'inline-block',
+    position: "relative",
+    display: "inline-block",
   },
   menu: {
     width: 170,
   },
   menuItem: {
-    display: 'flex',
-    alignItems: 'center',
-    '&:hover': {
-      fontWeight: 'bolder',
+    display: "flex",
+    alignItems: "center",
+    "&:hover": {
+      fontWeight: "bolder",
     },
   },
 });

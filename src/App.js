@@ -1,13 +1,13 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { ThemeProvider } from 'styled-components';
+import React from "react";
+import { Provider } from "react-redux";
+import { ThemeProvider } from "styled-components";
 
-import { themes } from 'react95';
+import { themes } from "react95";
 
-import reduxStore from './utils/store';
-import GlobalStyle from './utils/style';
+import reduxStore from "./utils/store";
+import GlobalStyle from "./utils/style";
 
-import IndexPage from './pages/IndexPage';
+import IndexPage from "./pages/IndexPage";
 
 const App = () => {
   return (
