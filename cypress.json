@@ -1,0 +1,6 @@
+{
+  "fixturesFolder": "tests/ui-tests/data",
+  "integrationFolder": "tests/ui-tests/integration",
+  "pluginsFile": "tests/ui-tests/plugins/index.js",
+  "supportFile": "tests/ui-tests/support/index.js"
+}

@@ -24,6 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx src/",
+    "cypress:open": "cypress open",
     "post-build": "bash ./scripts/post-build.sh",
     "pre-deploy": "yarn build && yarn post-build",
     "gh-deploy": "yarn pre-deploy && gh-pages -d build"
@@ -44,7 +45,9 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^9.5.2",
     "eslint": "^8.12.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-react": "^7.29.4",
     "gh-pages": "^3.2.3",
     "husky": "^7.0.0"
