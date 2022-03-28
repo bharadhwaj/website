@@ -29,9 +29,9 @@ const Trakstar = () => {
     <Cutout>
       <Fieldset className={classes.descriptionArea}>
         <div className={classes.titleArea}>
-          <h1 className={classes.title}>Trakstar</h1>
+          <h1 className={classes.title}>TRAKSTAR</h1>
           <Button square>
-            <Anchor href='https://trakstar.com/' target='_blank'>
+            <Anchor href='https://trakstar.com' target='_blank'>
               <LogoIcon image='/icons/internet.png' alt='' size={30} />
             </Anchor>
           </Button>
