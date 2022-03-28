@@ -1,3 +1,3 @@
-import * as windowAction from './window.action';
+import * as windowAction from "./window.action";
 
 export { windowAction };

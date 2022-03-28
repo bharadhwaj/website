@@ -1,11 +1,11 @@
-import React from 'react';
-import clsx from 'clsx';
-import { Button, Fieldset, Window, WindowContent, WindowHeader } from 'react95';
-import Draggable from 'react-draggable';
+import React from "react";
+import clsx from "clsx";
+import { Button, Fieldset, Window, WindowContent, WindowHeader } from "react95";
+import Draggable from "react-draggable";
 
-import style from './style';
+import style from "./style";
 
-import { WINDOW } from '../../constants';
+import { WINDOW } from "../../constants";
 
 const AboutMeWindow = (props) => {
   const {
@@ -42,13 +42,13 @@ const AboutMeWindow = (props) => {
               <span>about_me.exe</span>
             </div>
             <div>
-              <Button className={classes.actionButtons} size={'sm'} square onClick={minimizeWindow}>
+              <Button className={classes.actionButtons} size={"sm"} square onClick={minimizeWindow}>
                 <span>-</span>
               </Button>
-              <Button className={classes.actionButtons} size={'sm'} square onClick={toggleMaximizeWindow}>
+              <Button className={classes.actionButtons} size={"sm"} square onClick={toggleMaximizeWindow}>
                 <span>□</span>
               </Button>
-              <Button className={classes.actionButtons} size={'sm'} square onClick={closeWindow}>
+              <Button className={classes.actionButtons} size={"sm"} square onClick={closeWindow}>
                 <span>x</span>
               </Button>
             </div>
@@ -57,7 +57,7 @@ const AboutMeWindow = (props) => {
         <WindowContent>
           <Fieldset className={classes.aboutMe}>
             <div className={classes.paragraph}>
-              Hey there. This is Bharadhwaj, from Palakkad, God's own country - Kerala. I'm a passionate web developer,
+              Hey there. This is Bharadhwaj, from Palakkad, God\'s own country - Kerala. I'm a passionate web developer,
               programmer and a B.Tech graduate in Computer Science and Engineering. I am passionate about Technology,
               Entrepreneurship and Startup.
             </div>

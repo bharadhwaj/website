@@ -1,4 +1,4 @@
-import { actions, WINDOW } from '../constants';
+import { actions, WINDOW } from "../constants";
 
 const initialState = {
   active: null,

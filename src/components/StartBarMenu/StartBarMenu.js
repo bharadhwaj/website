@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Divider, List, ListItem } from 'react95';
+import React, { useState } from "react";
+import { Divider, List, ListItem } from "react95";
 
-import LinksMenu from '../LinksMenu';
-import WorksMenu from '../WorksMenu';
+import LinksMenu from "../LinksMenu";
+import WorksMenu from "../WorksMenu";
 
-import LogoIcon from '../LogoIcon';
+import LogoIcon from "../LogoIcon";
 
-import style from './style';
+import style from "./style";
 
 const StartBarMenu = (props) => {
   const { isMenuOpen, setMenuVisibility, showExperienceWindow, showAboutMeWindow, showShutdownPopup } = props;

@@ -1,9 +1,9 @@
-import React from 'react';
-import { List, ListItem } from 'react95';
+import React from "react";
+import { List, ListItem } from "react95";
 
-import LogoIcon from '../LogoIcon';
+import LogoIcon from "../LogoIcon";
 
-import style from './style';
+import style from "./style";
 
 const LinksMenu = (props) => {
   const { isLinksMenuOpen, setLinksMenuVisibility } = props;

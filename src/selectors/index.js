@@ -1,3 +1,3 @@
-import * as windowSelector from './window.selector';
+import * as windowSelector from "./window.selector";
 
 export { windowSelector };

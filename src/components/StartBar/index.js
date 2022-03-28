@@ -1,10 +1,10 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import StartBar from './StartBar';
+import StartBar from "./StartBar";
 
-import { windowAction } from '../../actions';
-import { windowSelector } from '../../selectors';
-import { WINDOW } from '../../constants';
+import { windowAction } from "../../actions";
+import { windowSelector } from "../../selectors";
+import { WINDOW } from "../../constants";
 
 const mapStateToProps = (state) => ({
   isAboutMeWindowVisible: windowSelector.isWindowOpen(WINDOW.ABOUT_ME)(state),

@@ -1,10 +1,10 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import ShutdownPopup from './ShutdownPopup';
+import ShutdownPopup from "./ShutdownPopup";
 
-import { windowAction } from '../../actions';
-import { windowSelector } from '../../selectors';
-import { WINDOW } from '../../constants';
+import { windowAction } from "../../actions";
+import { windowSelector } from "../../selectors";
+import { WINDOW } from "../../constants";
 
 const mapStateToProps = (state) => ({
   isVisible: windowSelector.isWindowOpen(WINDOW.SHUTDOWN)(state),

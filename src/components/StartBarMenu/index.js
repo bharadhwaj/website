@@ -1,9 +1,9 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import StartBarMenu from './StartBarMenu';
+import StartBarMenu from "./StartBarMenu";
 
-import { showWindow } from '../../actions/window.action';
-import { WINDOW } from '../../constants';
+import { showWindow } from "../../actions/window.action";
+import { WINDOW } from "../../constants";
 
 const mapStateToProps = null;
 

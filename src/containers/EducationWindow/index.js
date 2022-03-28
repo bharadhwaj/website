@@ -1,10 +1,10 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import EducationWIndow from './EducationWIndow';
+import EducationWIndow from "./EducationWIndow";
 
-import { windowAction } from '../../actions';
-import { WINDOW } from '../../constants';
-import { windowSelector } from '../../selectors';
+import { windowAction } from "../../actions";
+import { WINDOW } from "../../constants";
+import { windowSelector } from "../../selectors";
 
 const mapStateToProps = (state) => ({
   activeWindow: windowSelector.getActiveWindow(state),
