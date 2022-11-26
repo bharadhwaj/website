@@ -1,8 +1,6 @@
 import React from "react";
 import { List, ListItem } from "react95";
 
-import style from "./style";
-
 const WorksMenu = (props) => {
   const { isWorksMenuOpen, setWorksMenuVisibility } = props;
 
@@ -10,23 +8,31 @@ const WorksMenu = (props) => {
     return null;
   }
 
-  const classes = style();
-
   return (
     <>
-      <div className={classes.startMenuStyle}>
+      <div className='relative inline-block bottom-12 left-[173px]'>
         <List
-          className={classes.menu}
+          className='flex !w-44'
           horizontalAlign='left'
           verticalAlign='top'
           open={isWorksMenuOpen}
           onClick={() => setWorksMenuVisibility(false)}
         >
-          <ListItem as='a' href='https://fubar-charts.bharadhwajcn.com/' target='_blank' className={classes.menuItem}>
+          <ListItem
+            as='a'
+            href='https://fubar-charts.bharadhwajcn.com/'
+            target='_blank'
+            className='flex align-middle hover:font-bold'
+          >
             Fubar Charts
           </ListItem>
 
-          <ListItem as='a' href='https://app.getbasis.co/' target='_blank' className={classes.menuItem}>
+          <ListItem
+            as='a'
+            href='https://app.getbasis.co/'
+            target='_blank'
+            className='flex align-middle hover:font-bold'
+          >
             Basis
           </ListItem>
 
@@ -34,12 +40,17 @@ const WorksMenu = (props) => {
             as='a'
             href='https://www.qburst.com/products/automate/'
             target='_blank'
-            className={classes.menuItem}
+            className='flex align-middle hover:font-bold'
           >
             Automate
           </ListItem>
 
-          <ListItem as='a' href='https://www.github.com/bharadhwaj' target='_blank' className={classes.menuItem}>
+          <ListItem
+            as='a'
+            href='https://www.github.com/bharadhwaj'
+            target='_blank'
+            className='flex align-middle hover:font-bold'
+          >
             More on Github...
           </ListItem>
         </List>

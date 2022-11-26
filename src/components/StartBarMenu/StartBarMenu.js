@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Divider, List, ListItem } from "react95";
+import { Divider, List, ListItem, themes } from "react95";
 
 import LinksMenu from "../LinksMenu";
 import WorksMenu from "../WorksMenu";
@@ -15,6 +15,8 @@ const StartBarMenu = (props) => {
   if (!isMenuOpen) {
     return null;
   }
+
+  const activeTabClassName = `bg-[${themes.default.hoverBackground}] text-[${themes.default.textInvert}] font-bold`;
 
   return (
     <>
@@ -50,7 +52,7 @@ const StartBarMenu = (props) => {
           </ListItem>
 
           <ListItem
-            className='hover:font-bold'
+            className={`${isWorksMenuOpen && activeTabClassName} hover:font-bold`}
             onMouseOver={() => {
               setWorksMenuVisibility(true);
               setLinksMenuVisibility(false);
@@ -59,9 +61,9 @@ const StartBarMenu = (props) => {
             <div className='flex justify-between'>
               <div className='flex align-middle items-center content-center gap-x-3'>
                 <LogoIcon className='h-8 w-8' image='/icons/folder.png' alt='' />
-                <span>Works</span>
+                <span className={isWorksMenuOpen && activeTabClassName}>Works</span>
               </div>
-              <span className='items-end'>▸</span>
+              <span className={`${isWorksMenuOpen && activeTabClassName} items-end`}>▸</span>
             </div>
           </ListItem>
 
@@ -83,7 +85,7 @@ const StartBarMenu = (props) => {
           </ListItem>
 
           <ListItem
-            className='hover:font-bold'
+            className={`${isLinksMenuOpen && activeTabClassName} hover:font-bold`}
             onMouseOver={() => {
               setWorksMenuVisibility(false);
               setLinksMenuVisibility(true);
@@ -92,9 +94,9 @@ const StartBarMenu = (props) => {
             <div className='flex justify-between'>
               <div className='flex align-middle items-center content-center gap-x-3'>
                 <LogoIcon className='h-8 w-8' image='/icons/links.png' alt='' />
-                <span> Links</span>
+                <span className={isLinksMenuOpen && activeTabClassName}>Links</span>
               </div>
-              <span className='items-end'>▸</span>
+              <span className={`${isLinksMenuOpen && activeTabClassName} items-end`}>▸</span>
             </div>
           </ListItem>
 
