@@ -45,7 +45,7 @@ const StartBar = (props) => {
         <div className='flex flex-grow'>
           <StartBarMenu isMenuOpen={isMenuOpen} setMenuVisibility={setMenuVisibility} />
           <Button className='font-bold' onClick={() => setMenuVisibility(!isMenuOpen)} active={isMenuOpen}>
-            <LogoIcon image='/icons/start-icon.png' alt='' />
+            <LogoIcon className='w-6 mr-2' image='/icons/start-icon.png' alt='' />
             Start
           </Button>
 
@@ -57,7 +57,7 @@ const StartBar = (props) => {
               onClick={() => setVisibility(WINDOW.ABOUT_ME, isAboutMeWindowMinimized)}
               active={!isAboutMeWindowMinimized}
             >
-              <LogoIcon image='/icons/app.png' alt='' />
+              <LogoIcon className='w-6 mr-2' image='/icons/app.png' alt='' />
               about_me.exe
             </Button>
           )}
@@ -68,7 +68,7 @@ const StartBar = (props) => {
               onClick={() => setVisibility(WINDOW.EDUCATION, isEducationWindowMinimized)}
               active={!isEducationWindowMinimized}
             >
-              <LogoIcon image='/icons/app.png' alt='' />
+              <LogoIcon className='w-6 mr-2' image='/icons/app.png' alt='' />
               education.exe
             </Button>
           )}
@@ -79,7 +79,7 @@ const StartBar = (props) => {
               onClick={() => setVisibility(WINDOW.EXPERIENCE, isExperienceWindowMinimized)}
               active={!isExperienceWindowMinimized}
             >
-              <LogoIcon image='/icons/app.png' alt='' />
+              <LogoIcon className='w-6 mr-2' image='/icons/app.png' alt='' />
               experience.exe
             </Button>
           )}

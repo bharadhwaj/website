@@ -6,12 +6,8 @@ import WorksMenu from "../WorksMenu";
 
 import LogoIcon from "../LogoIcon";
 
-import style from "./style";
-
 const StartBarMenu = (props) => {
   const { isMenuOpen, setMenuVisibility, showExperienceWindow, showAboutMeWindow, showShutdownPopup } = props;
-
-  const classes = style();
 
   const [isLinksMenuOpen, setLinksMenuVisibility] = useState(false);
   const [isWorksMenuOpen, setWorksMenuVisibility] = useState(false);
@@ -34,10 +30,10 @@ const StartBarMenu = (props) => {
         onMouseOver={() => setWorksMenuVisibility(true)}
       />
 
-      <div className={classes.startMenuStyle}>
-        <List className={classes.menu} horizontalAlign='left' verticalAlign='top' open={isMenuOpen}>
+      <div>
+        <List className='flex !w-44' horizontalAlign='left' verticalAlign='top' open={isMenuOpen}>
           <ListItem
-            className={classes.menuItem}
+            className='hover:font-bold'
             onMouseOver={() => {
               setWorksMenuVisibility(false);
               setLinksMenuVisibility(false);
@@ -47,25 +43,30 @@ const StartBarMenu = (props) => {
               showExperienceWindow();
             }}
           >
-            <LogoIcon image='/icons/experience-computer.png' alt='' size={30} />
-            Experience
+            <div className='flex align-middle items-center content-center px-1 gap-x-3'>
+              <LogoIcon className='h-8 w-8' image='/icons/experience-computer.png' alt='' />
+              <span>Experience</span>
+            </div>
           </ListItem>
 
           <ListItem
-            className={classes.subMenuItem}
+            className='hover:font-bold'
             onMouseOver={() => {
               setWorksMenuVisibility(true);
               setLinksMenuVisibility(false);
             }}
-            style={{ marginLeft: -7 }}
           >
-            <LogoIcon image='/icons/folder.png' alt='' size={40} />
-            Works
-            <span className={classes.subMenuIcon}>▸</span>
+            <div className='flex justify-between'>
+              <div className='flex align-middle items-center content-center gap-x-3'>
+                <LogoIcon className='h-8 w-8' image='/icons/folder.png' alt='' />
+                <span>Works</span>
+              </div>
+              <span className='items-end'>▸</span>
+            </div>
           </ListItem>
 
           <ListItem
-            className={classes.menuItem}
+            className='hover:font-bold'
             onMouseOver={() => {
               setWorksMenuVisibility(false);
               setLinksMenuVisibility(false);
@@ -75,26 +76,32 @@ const StartBarMenu = (props) => {
               showAboutMeWindow();
             }}
           >
-            <LogoIcon image='/icons/notepad.png' alt='' size={25} />
-            About Me
+            <div className='flex align-middle items-center content-center gap-x-3'>
+              <LogoIcon className='h-8 w-8' image='/icons/notepad.png' alt='' />
+              <span>About Me</span>
+            </div>
           </ListItem>
 
           <ListItem
-            className={classes.subMenuItem}
+            className='hover:font-bold'
             onMouseOver={() => {
               setWorksMenuVisibility(false);
               setLinksMenuVisibility(true);
             }}
           >
-            <LogoIcon image='/icons/globe.png' alt='' size={30} />
-            Links
-            <span className={classes.subMenuIcon}>▸</span>
+            <div className='flex justify-between'>
+              <div className='flex align-middle items-center content-center gap-x-3'>
+                <LogoIcon className='h-8 w-8' image='/icons/links.png' alt='' />
+                <span> Links</span>
+              </div>
+              <span className='items-end'>▸</span>
+            </div>
           </ListItem>
 
           <Divider />
 
           <ListItem
-            className={classes.menuItem}
+            className='hover:font-bold'
             onMouseOver={() => {
               setWorksMenuVisibility(false);
               setLinksMenuVisibility(false);
@@ -104,8 +111,10 @@ const StartBarMenu = (props) => {
               showShutdownPopup();
             }}
           >
-            <LogoIcon image='/icons/shutdown-computer.png' alt='' size={30} />
-            Shutdown
+            <div className='flex align-middle items-center content-center gap-x-3'>
+              <LogoIcon className='h-8 w-8' image='/icons/shutdown-computer.png' alt='' />
+              <span>Shutdown</span>
+            </div>
           </ListItem>
         </List>
       </div>
