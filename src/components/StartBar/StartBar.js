@@ -1,8 +1,6 @@
 import React from "react";
 import { AppBar, Bar, Button, Toolbar } from "react95";
 
-import style from "./style";
-
 import LogoIcon from "../LogoIcon";
 import StartBarMenu from "../StartBarMenu";
 import { WINDOW } from "../../constants";
@@ -41,25 +39,23 @@ const StartBar = (props) => {
     return () => clearInterval(timer);
   }, []);
 
-  const classes = style();
-
   return (
-    <AppBar className={classes.appbar}>
+    <AppBar className='top-[calc(100%-45px)!important]'>
       <Toolbar>
-        <div className={classes.startMenu}>
+        <div className='flex flex-grow'>
           <StartBarMenu isMenuOpen={isMenuOpen} setMenuVisibility={setMenuVisibility} />
-          <Button onClick={() => setMenuVisibility(!isMenuOpen)} active={isMenuOpen} style={{ fontWeight: "bold" }}>
+          <Button className='font-bold' onClick={() => setMenuVisibility(!isMenuOpen)} active={isMenuOpen}>
             <LogoIcon image='/icons/start-icon.png' alt='' />
             Start
           </Button>
 
-          <Bar className={classes.startMenuDivider} vertical size='lg' />
+          <Bar className='mx-2 -mt-1' vertical size='lg' />
 
           {isAboutMeWindowVisible && (
             <Button
+              className='font-bold'
               onClick={() => setVisibility(WINDOW.ABOUT_ME, isAboutMeWindowMinimized)}
               active={!isAboutMeWindowMinimized}
-              style={{ fontWeight: "bold" }}
             >
               <LogoIcon image='/icons/app.png' alt='' />
               about_me.exe
@@ -68,9 +64,9 @@ const StartBar = (props) => {
 
           {isEducationWindowVisible && (
             <Button
+              className='font-bold'
               onClick={() => setVisibility(WINDOW.EDUCATION, isEducationWindowMinimized)}
               active={!isEducationWindowMinimized}
-              style={{ fontWeight: "bold" }}
             >
               <LogoIcon image='/icons/app.png' alt='' />
               education.exe
@@ -79,20 +75,18 @@ const StartBar = (props) => {
 
           {isExperienceWindowVisible && (
             <Button
+              className='font-bold'
               onClick={() => setVisibility(WINDOW.EXPERIENCE, isExperienceWindowMinimized)}
               active={!isExperienceWindowMinimized}
-              style={{ fontWeight: "bold" }}
             >
               <LogoIcon image='/icons/app.png' alt='' />
               experience.exe
             </Button>
           )}
         </div>
-        <div className={classes.clockButton}>
-          <Button active style={{ fontWeight: "bold" }}>
-            {currentTime}
-          </Button>
-        </div>
+        <Button active className='-mt-1 font-bold'>
+          {currentTime}
+        </Button>
       </Toolbar>
     </AppBar>
   );
