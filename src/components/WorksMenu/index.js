@@ -20,11 +20,11 @@ const WorksMenu = (props) => {
         >
           <ListItem
             as='a'
-            href='https://fubar-charts.bharadhwajcn.com/'
+            href='https://app.trakstar.com/'
             target='_blank'
             className='flex align-middle hover:font-bold'
           >
-            Fubar Charts
+            Trakstar
           </ListItem>
 
           <ListItem
@@ -43,6 +43,15 @@ const WorksMenu = (props) => {
             className='flex align-middle hover:font-bold'
           >
             Automate
+          </ListItem>
+
+          <ListItem
+            as='a'
+            href='https://fubar-charts.bharadhwajcn.com/'
+            target='_blank'
+            className='flex align-middle hover:font-bold'
+          >
+            Fubar Charts
           </ListItem>
 
           <ListItem
