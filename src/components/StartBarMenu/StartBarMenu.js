@@ -8,6 +8,7 @@ import LogoIcon from "../LogoIcon";
 
 const StartBarMenu = (props) => {
   const { isMenuOpen, setMenuVisibility, showExperienceWindow, showAboutMeWindow, showShutdownPopup } = props;
+  const { hoverBackground = "#000080", textInvert = "#ffffff" } = themes.default;
 
   const [isLinksMenuOpen, setLinksMenuVisibility] = useState(false);
   const [isWorksMenuOpen, setWorksMenuVisibility] = useState(false);
@@ -16,10 +17,21 @@ const StartBarMenu = (props) => {
     return null;
   }
 
-  const activeTabClassName = `bg-[${themes.default.hoverBackground}] text-[${themes.default.textInvert}] font-bold`;
+  const handleOverlayClick = () => {
+    setMenuVisibility(false);
+    setLinksMenuVisibility(false);
+    setWorksMenuVisibility(false);
+  };
+
+  const activeTabClassName = `bg-[${hoverBackground}] text-[${textInvert}] font-bold`;
 
   return (
     <>
+      <div
+        data-test-id='menu-overlay'
+        className='fixed w-full h-full top-0 left-0 right-0 bottom-0'
+        onClick={handleOverlayClick}
+      />
       <LinksMenu
         isLinksMenuOpen={isMenuOpen && isLinksMenuOpen}
         setLinksMenuVisibility={setLinksMenuVisibility}
