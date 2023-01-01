@@ -55,14 +55,14 @@ const AboutMeWindow = (props) => {
         <WindowContent className='h-[100%]'>
           <Fieldset className='h-[90%] md:min-h-fit text-base font-monospace overflow-y-scroll'>
             <div className='mt-5 text-gray-600'>
-              Hey there. This is Bharadhwaj, from God's own country - Kerala. I'm a passionate web developer, programmer
-              and a B.Tech graduate in Computer Science and Engineering. I am passionate about Technology,
-              Entrepreneurship and Startup.
+              Hello there. I am Bharadhwaj C N. I am from God's own country, Kerala. I'm a web developer and programmer
+              with a Bachelor's degree in Computer Science and Engineering. I am enthusiastic about technology,
+              entrepreneurship, and startups.
             </div>
             <div className='mt-5 text-gray-600'>
-              Currently, I am living in Bangalore, working for Applied Training, a Talent Management platform, where I
-              am trying to integrate multiple products of Applied under a single hood. My day to day work mostly consist
-              of coding in Python Django and React.js.
+              I'm a full stack engineer. I've worked on product-based start-ups in the Fin-tech, Ad-tech, and HRIS
+              domains. For frontend, I primarily use React.js (occasionally with Next.js) and Node.js or Python Django
+              Rest Framework for backend.
             </div>
             <div className='mt-5 text-gray-600'>
               If not at Work and if not sleeping, I spend time travelling and exploring new places. I follow Sports
