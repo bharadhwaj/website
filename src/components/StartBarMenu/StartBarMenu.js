@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Divider, List, ListItem, themes } from "react95";
+import { Divider, List, ListItem } from "react95";
 
 import LinksMenu from "../LinksMenu";
 import WorksMenu from "../WorksMenu";
@@ -8,7 +8,6 @@ import LogoIcon from "../LogoIcon";
 
 const StartBarMenu = (props) => {
   const { isMenuOpen, setMenuVisibility, showExperienceWindow, showAboutMeWindow, showShutdownPopup } = props;
-  const { hoverBackground = "#000080", textInvert = "#ffffff" } = themes.default;
 
   const [isLinksMenuOpen, setLinksMenuVisibility] = useState(false);
   const [isWorksMenuOpen, setWorksMenuVisibility] = useState(false);
@@ -23,7 +22,7 @@ const StartBarMenu = (props) => {
     setWorksMenuVisibility(false);
   };
 
-  const activeTabClassName = `bg-[${hoverBackground}] text-[${textInvert}] font-bold`;
+  const activeTabClassName = "bg-[#000080] text-[#ffffff] font-bold";
 
   return (
     <>
