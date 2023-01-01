@@ -1,6 +1,6 @@
 {
   "name": "bharadhwajcn.com",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "private": true,
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.17",
