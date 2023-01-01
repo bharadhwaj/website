@@ -27,11 +27,13 @@ const StartBarMenu = (props) => {
 
   return (
     <>
-      <div
-        data-test-id='menu-overlay'
-        className='fixed w-full h-full top-0 left-0 right-0 bottom-0'
-        onClick={handleOverlayClick}
-      />
+      {isMenuOpen && (
+        <div
+          data-test-id='menu-overlay'
+          className='fixed w-full h-full top-0 left-0 right-0 bottom-0'
+          onClick={handleOverlayClick}
+        />
+      )}
       <LinksMenu
         isLinksMenuOpen={isMenuOpen && isLinksMenuOpen}
         setLinksMenuVisibility={setLinksMenuVisibility}
