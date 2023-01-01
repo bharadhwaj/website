@@ -12,7 +12,7 @@ const WorksMenu = (props) => {
     <>
       <div className='relative inline-block bottom-12 left-[173px]'>
         <List
-          className='flex !w-44'
+          className='flex flex-col !w-44'
           horizontalAlign='left'
           verticalAlign='top'
           open={isWorksMenuOpen}
