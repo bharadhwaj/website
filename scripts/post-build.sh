@@ -2,12 +2,12 @@
 
 echo "Post build script starting execution..."
 
-CURRENT_BRANCH=$(git branch --show-current)
+# CURRENT_BRANCH=$(git branch --show-current)
 
-if [ "$CURRENT_BRANCH" != "master" ] && [ "$CURRENT_BRANCH" != "main" ]; then
-  echo "Error: You must be in master/main branch to run this. Currently in $CURRENT_BRANCH"
-  exit 1
-fi
+# if [ "$CURRENT_BRANCH" != "master" ] && [ "$CURRENT_BRANCH" != "main" ]; then
+#   echo "Error: You must be in master/main branch to run this. Currently in $CURRENT_BRANCH"
+#   exit 1
+# fi
 
 
 echo bharadhwajcn.com > ./build/CNAME
