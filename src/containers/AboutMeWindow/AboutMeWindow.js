@@ -25,14 +25,14 @@ const AboutMeWindow = (props) => {
 
   return (
     <Draggable
-      defaultClassName={activeWindow === WINDOW.ABOUT_ME && "z-10"}
+      defaultClassName={activeWindow === WINDOW.ABOUT_ME ? "z-10" : "z-1"}
       bounds='parent'
       handle='header'
       defaultPosition={{ x: 40, y: 40 }}
       position={isMaximized && { x: 0, y: 0 }}
     >
       <Window
-        className={isMaximized ? maximizedWindowClassName : normalWindowClassName}
+        className={`font-monospace ${isMaximized ? maximizedWindowClassName : normalWindowClassName}`}
         onClick={setAboutMeWindowActive}
       >
         <header>
@@ -47,7 +47,7 @@ const AboutMeWindow = (props) => {
               <Button className='-ml-0.5 -mb-0.5 font-bold' size={"sm"} square onClick={toggleMaximizeWindow}>
                 <span>□</span>
               </Button>
-              <Button className='-ml-0.5 -mb-0.5' size={"sm"} square onClick={closeWindow}>
+              <Button className='-ml-0.5 -mb-0.5 font-sans' size={"sm"} square onClick={closeWindow}>
                 <span>x</span>
               </Button>
             </div>

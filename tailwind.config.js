@@ -3,6 +3,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
+      sans: ["Helvetica", "Arial", "sans-serif"],
       monospace: ["monospace", "monospace"],
     },
     extend: {},
