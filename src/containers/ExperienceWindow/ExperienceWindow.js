@@ -261,13 +261,23 @@ const ExperienceWindow = (props) => {
               <span>experience.exe</span>
             </div>
             <div className='font-sans'>
-              <Button className='-ml-0.5 -mb-0.5 font-bold' size={"sm"} square onClick={minimizeWindow}>
+              <Button
+                className='-ml-0.5 -mb-0.5 font-bold z-20 bg-zinc-300'
+                size={"sm"}
+                square
+                onClick={minimizeWindow}
+              >
                 <span>-</span>
               </Button>
-              <Button className='-ml-0.5 -mb-0.5 font-extrabold' size={"sm"} square onClick={toggleMaximizeWindow}>
+              <Button
+                className='-ml-0.5 -mb-0.5 font-extrabold z-20 bg-zinc-300'
+                size={"sm"}
+                square
+                onClick={toggleMaximizeWindow}
+              >
                 <span>□</span>
               </Button>
-              <Button className='-ml-0.5 -mb-0.5 font-sans' size={"sm"} square onClick={closeWindow}>
+              <Button className='-ml-0.5 -mb-0.5 font-sans z-20 bg-zinc-300' size={"sm"} square onClick={closeWindow}>
                 <span>x</span>
               </Button>
             </div>
