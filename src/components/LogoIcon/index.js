@@ -1,15 +1,9 @@
 import React from "react";
 
-import style from "./style";
-
-const LogoIcon = ({ image, alt, size }) => {
-  const classes = style();
-
-  const styleObj = size ? { height: size } : {};
-
+const LogoIcon = ({ image, alt, className = "" }) => {
   return (
-    <span className={classes.icon} style={styleObj}>
-      <img className={classes.iconImage} src={image} alt={alt} />
+    <span className={className}>
+      <img src={image} alt={alt} height='auto' width='auto' />
     </span>
   );
 };

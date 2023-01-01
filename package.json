@@ -1,6 +1,6 @@
 {
   "name": "bharadhwajcn.com",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "private": true,
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.17",
@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-draggable": "^4.2.0",
+    "react-draggable": "^4.4.5",
     "react-redux": "^7.2.0",
     "react-scripts": "5.0.0",
     "react95": "^2.0.0",
@@ -44,9 +44,12 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
     "eslint": "^8.12.0",
     "eslint-plugin-react": "^7.29.4",
     "gh-pages": "^3.2.3",
-    "husky": "^7.0.0"
+    "husky": "^7.0.0",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4"
   }
 }

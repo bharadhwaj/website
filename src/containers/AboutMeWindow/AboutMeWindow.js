@@ -1,9 +1,6 @@
 import React from "react";
-import clsx from "clsx";
 import { Button, Fieldset, Window, WindowContent, WindowHeader } from "react95";
 import Draggable from "react-draggable";
-
-import style from "./style";
 
 import { WINDOW } from "../../constants";
 
@@ -19,7 +16,8 @@ const AboutMeWindow = (props) => {
     closeWindow,
   } = props;
 
-  const classes = style();
+  const maximizedWindowClassName = "min-h-[calc(100vh-47px)] max-h-[calc(100vh-47px)] min-w-full";
+  const normalWindowClassName = "h-[50%] max-h-[calc(100vh-80px)] md:w-[60%] w-[90%]";
 
   if (!isVisible || isMinimized) {
     return null;
@@ -27,46 +25,49 @@ const AboutMeWindow = (props) => {
 
   return (
     <Draggable
-      defaultClassName={clsx(activeWindow === WINDOW.ABOUT_ME && classes.activeWindow)}
       bounds='parent'
       handle='header'
-      defaultPosition={{ x: 20, y: 40 }}
+      defaultPosition={{ x: 0, y: 20 }}
+      position={isMaximized && { x: 0, y: 0 }}
+      onMouseDown={setAboutMeWindowActive}
     >
       <Window
-        className={clsx(isMaximized ? classes.maximizedScreen : classes.minimizedScreen)}
+        className={`font-monospace overflow-y-scroll md:overflow-y-hidden ${
+          isMaximized ? maximizedWindowClassName : normalWindowClassName
+        } ${activeWindow === WINDOW.ABOUT_ME ? "z-10" : "z-1"}`}
         onClick={setAboutMeWindowActive}
       >
         <header>
-          <WindowHeader className={classes.headerArea}>
+          <WindowHeader className='flex items-center justify-between cursor-move'>
             <div>
               <span>about_me.exe</span>
             </div>
             <div>
-              <Button className={classes.actionButtons} size={"sm"} square onClick={minimizeWindow}>
+              <Button className='-ml-0.5 -mb-0.5 font-bold' size={"sm"} square onClick={minimizeWindow}>
                 <span>-</span>
               </Button>
-              <Button className={classes.actionButtons} size={"sm"} square onClick={toggleMaximizeWindow}>
+              <Button className='-ml-0.5 -mb-0.5 font-bold' size={"sm"} square onClick={toggleMaximizeWindow}>
                 <span>□</span>
               </Button>
-              <Button className={classes.actionButtons} size={"sm"} square onClick={closeWindow}>
+              <Button className='-ml-0.5 -mb-0.5 font-sans' size={"sm"} square onClick={closeWindow}>
                 <span>x</span>
               </Button>
             </div>
           </WindowHeader>
         </header>
-        <WindowContent>
-          <Fieldset className={classes.aboutMe}>
-            <div className={classes.paragraph}>
-              Hey there. This is Bharadhwaj, from Palakkad, God\'s own country - Kerala. I'm a passionate web developer,
-              programmer and a B.Tech graduate in Computer Science and Engineering. I am passionate about Technology,
-              Entrepreneurship and Startup.
+        <WindowContent className='min-h-full overflow-scroll'>
+          <Fieldset className='text-base font-monospace overflow-scroll'>
+            <div className='mt-5 text-gray-600'>
+              Hello there. I am Bharadhwaj C N. I am from God's own country, Kerala. I'm a web developer and programmer
+              with a Bachelor's degree in Computer Science and Engineering. I am enthusiastic about technology,
+              entrepreneurship, and startups.
             </div>
-            <div className={classes.paragraph}>
-              Currently, I am living in Bangalore, working for Applied Training, a Talent Management platform, where I
-              am trying to integrate multiple products of Applied under a single hood. My day to day work mostly consist
-              of coding in Python Django and React.js.
+            <div className='mt-5 text-gray-600'>
+              I'm a full stack engineer. I've worked on product-based start-ups in the Fin-tech, Ad-tech, and HRIS
+              domains. For frontend, I primarily use React.js (occasionally with Next.js) and Node.js or Python Django
+              Rest Framework for backend.
             </div>
-            <div className={classes.paragraph}>
+            <div className='mt-5 text-gray-600'>
               If not at Work and if not sleeping, I spend time travelling and exploring new places. I follow Sports
               especially Cricket and Football and love to play outdoor games(even though I suck at most of them).
             </div>

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import EducationWIndow from "./EducationWIndow";
+import EducationWindow from "./EducationWindow";
 
 import { windowAction } from "../../actions";
 import { WINDOW } from "../../constants";
@@ -23,4 +23,4 @@ const mapDispatchToProps = (dispatch) => ({
   closeWindow: () => dispatch(windowAction.closeWindow(WINDOW.EDUCATION)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(EducationWIndow);
+export default connect(mapStateToProps, mapDispatchToProps)(EducationWindow);
