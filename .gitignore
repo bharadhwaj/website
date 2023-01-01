@@ -147,11 +147,6 @@ sftp-config.json
 #pull_request_template.md
 docs
 
-basis-dev01-firebase-sa.json
-basis-firebase-dev-sa.json
-basis-firebase-prod-sa.json
-basis-firebase-staging-sa.json
 dump.rdb
-package-lock.json
 *.log
 node_modules

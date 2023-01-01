@@ -14,7 +14,7 @@ const LinksMenu = (props) => {
     <div className='relative inline-block bottom-12 left-[173px]'>
       {isLinksMenuOpen && (
         <List
-          className='flex !w-44'
+          className='flex flex-col !w-44'
           horizontalAlign='left'
           verticalAlign='top'
           open={isLinksMenuOpen}

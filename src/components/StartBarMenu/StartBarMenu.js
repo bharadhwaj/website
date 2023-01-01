@@ -46,7 +46,7 @@ const StartBarMenu = (props) => {
       />
 
       <div>
-        <List className='flex !w-44' horizontalAlign='left' verticalAlign='top' open={isMenuOpen}>
+        <List className='flex flex-col !w-44' horizontalAlign='left' verticalAlign='top' open={isMenuOpen}>
           <ListItem
             className='hover:font-bold'
             onMouseOver={() => {
