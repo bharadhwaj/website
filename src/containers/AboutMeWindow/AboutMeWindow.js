@@ -16,7 +16,7 @@ const AboutMeWindow = (props) => {
     closeWindow,
   } = props;
 
-  const maximizedWindowClassName = "h-[calc(100%-45px)] min-w-full";
+  const maximizedWindowClassName = "min-h-[calc(100vh-47px)] min-w-full";
   const normalWindowClassName = "h-[50%] max-w-[60%]";
 
   if (!isVisible || isMinimized) {
@@ -28,7 +28,8 @@ const AboutMeWindow = (props) => {
       defaultClassName={activeWindow === WINDOW.ABOUT_ME && "z-10"}
       bounds='parent'
       handle='header'
-      defaultPosition={{ x: 0, y: 0 }}
+      defaultPosition={{ x: 40, y: 40 }}
+      position={isMaximized && { x: 0, y: 0 }}
     >
       <Window
         className={isMaximized ? maximizedWindowClassName : normalWindowClassName}
@@ -52,8 +53,8 @@ const AboutMeWindow = (props) => {
             </div>
           </WindowHeader>
         </header>
-        <WindowContent className='h-[100%]'>
-          <Fieldset className='h-[90%] md:min-h-fit text-base font-monospace overflow-y-scroll'>
+        <WindowContent className='min-h-full'>
+          <Fieldset className='text-base font-monospace overflow-y-scroll'>
             <div className='mt-5 text-gray-600'>
               Hello there. I am Bharadhwaj C N. I am from God's own country, Kerala. I'm a web developer and programmer
               with a Bachelor's degree in Computer Science and Engineering. I am enthusiastic about technology,
