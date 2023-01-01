@@ -14,7 +14,7 @@ const ShutdownPopup = (props) => {
   const shutdownAction = (
     <>
       <Button
-        style={{ margin: 5 }}
+        className='m-1'
         onClick={() => {
           setShowDown(true);
           setTimeout(() => {
@@ -25,7 +25,7 @@ const ShutdownPopup = (props) => {
       >
         Yes
       </Button>
-      <Button style={{ margin: 5 }} onClick={closePopup}>
+      <Button className='m-1' onClick={closePopup}>
         Cancel
       </Button>
     </>
@@ -42,7 +42,7 @@ const ShutdownPopup = (props) => {
     );
   }
 
-  return <Hourglass style={{ padding: "20% 0" }} />;
+  return <Hourglass className='px-[20%]' />;
 };
 
 export default ShutdownPopup;

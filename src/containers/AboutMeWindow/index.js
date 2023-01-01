@@ -7,7 +7,7 @@ import { windowSelector } from "../../selectors";
 import { WINDOW } from "../../constants";
 
 const mapStateToProps = (state) => ({
-  activeWindow: windowSelector.getActiveWindow(state),
+  activeWindow: windowSelector.getActiveWindow()(state),
   isVisible: windowSelector.isWindowOpen(WINDOW.ABOUT_ME)(state),
   isMinimized: windowSelector.isWindowMinimized(WINDOW.ABOUT_ME)(state),
   isMaximized: windowSelector.isWindowMaximized(WINDOW.ABOUT_ME)(state),

@@ -40,7 +40,7 @@ const StartBar = (props) => {
   }, []);
 
   return (
-    <AppBar className='top-[calc(100%-45px)!important]'>
+    <AppBar className='top-[calc(100%-45px)!important] z-50'>
       <Toolbar>
         <div className='flex flex-grow'>
           <StartBarMenu isMenuOpen={isMenuOpen} setMenuVisibility={setMenuVisibility} />

@@ -29,7 +29,7 @@ export default function windowReducer(state = initialState, action) {
     case actions.WINDOW.SET_ACTIVE_WINDOW:
       return {
         ...state,
-        active: action.payload.window,
+        active: action.payload.windowName,
       };
 
     case actions.WINDOW.SHOW_WINDOW:

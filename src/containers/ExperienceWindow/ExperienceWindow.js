@@ -240,18 +240,19 @@ const ExperienceWindow = (props) => {
   }
 
   const maximizedWindowClassName = "min-h-[calc(100vh-47px)] min-w-full";
-  const normalWindowClassName = "h-[50%] w-[60%]";
+  const normalWindowClassName = "h-[50%] md:w-[60%] w-[90%]";
 
   return (
     <Draggable
-      defaultClassName={activeWindow === WINDOW.EXPERIENCE ? "z-10" : "z-1"}
       bounds='parent'
       handle='header'
-      defaultPosition={{ x: -20, y: 70 }}
+      defaultPosition={{ x: 0, y: 70 }}
       position={isMaximized && { x: 0, y: 0 }}
     >
       <Window
-        className={`font-monospace ${isMaximized ? maximizedWindowClassName : normalWindowClassName}`}
+        className={`font-monospace overflow-y-scroll md:overflow-y-hidden ${
+          isMaximized ? maximizedWindowClassName : normalWindowClassName
+        } ${activeWindow === WINDOW.EXPERIENCE ? "z-10" : "z-1"}`}
         onClick={setExperienceWindowActive}
       >
         <header>
